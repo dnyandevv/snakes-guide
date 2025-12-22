@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.root-layout-bg {
+  min-height: 100vh;
+  max-height: 100%;
+
+  background-size: cover;
+  background-position: center top;
+  background-image: url('/bg-image.png');
+}
