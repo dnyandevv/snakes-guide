@@ -21,6 +21,10 @@ export default function RootLayout() {
                         <div className="max-w-[90%] mx-auto pt-12 z-10 bg-[#f7f8f2] px-6 pb-20 rounded-t-[3rem] -mt-12 shadow-2xl">
                             <Outlet />
                         </div>
+
+                        <footer className="bg-green-900 text-white text-center py-4 mt-12">
+                            &copy; {new Date().getFullYear()} Saapmahiiite. Made for educational purposes. @Dnyan_dev
+                        </footer>
                     </main>
                 </div>
            </div>

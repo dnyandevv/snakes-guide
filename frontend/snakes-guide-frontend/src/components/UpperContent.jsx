@@ -20,7 +20,7 @@ export default function UpperContent() {
                 </p>
                 <button className="bg-green-800 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded mt-6 shadow-lg transition-colors duration-300 drop-shadow-md"
                 >
-                    Explore Species
+                    Explore More Species
                 </button>
             </div>
         </div>
