@@ -8,3 +8,14 @@
   background-position: center top;
   background-image: url('/bg-image-cropped.png');
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-out forwards;
+}

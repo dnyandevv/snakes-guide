@@ -2,6 +2,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import RootLayout from './components/Rootlayout'
 import Homepage from './components/Homepage'
+import SnakeInfo from './components/SnakeInfo'
 
 function App() {
   const router = createBrowserRouter([
@@ -10,8 +11,13 @@ function App() {
       element: <RootLayout />,
       children:[
         {
-          path: '', element: <Homepage />
-        }
+          index: true,
+          element: <Homepage />,
+        },
+        {
+          path: 'snakes-info',
+          element: <SnakeInfo />,
+        },
       ]
     }
   ])

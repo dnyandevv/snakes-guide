@@ -1,6 +1,8 @@
-export default function SnakeCard({name, scientificName, image, type}) {
+import { Link } from "react-router";
+
+export default function SnakeCard({name, scientificName, image, type, id}) {
     return (
-        <>
+        <Link to={`/snakes-info/${id}`}>
             <div className="max-w-xs flex flex-col justify-between bg-gray-200 relative rounded-[1rem]">
                 <div className="p-4  group">
                     <div className="w-full aspect-square overflow-hidden bg-gray-200 rounded-[1rem]">
@@ -20,6 +22,6 @@ export default function SnakeCard({name, scientificName, image, type}) {
                     <p className="text-sm italic text-gray-500 font-medium">{scientificName}</p>
                 </div>
             </div>
-        </>
+        </Link>
     )
 }
