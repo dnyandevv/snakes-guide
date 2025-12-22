@@ -13,14 +13,12 @@ export default function RootLayout() {
                         <MainNav />
                     </header>
 
-                    <div className="root-layout-bg min-h-[80vh] flex items-center justify-center">
-                        <UpperContent /> 
+                    <div className="root-layout-bg min-h-[80vh] flex items-center justify-left px-6 pt-24 ">
+                        <UpperContent />
+                        
                     </div>
-                    <main className="relative z-10 bg-[#f7f8f2] px-6 pb-20 rounded-t-[3rem] -mt-32 shadow-2xl">
-                        <div className="max-w-6xl mx-auto pt-12">
-                            <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                                The Big Four
-                            </h2>
+                    <main className="relative ">
+                        <div className="max-w-[90%] mx-auto pt-12 z-10 bg-[#f7f8f2] px-6 pb-20 rounded-t-[3rem] -mt-12 shadow-2xl">
                             <Outlet />
                         </div>
                     </main>

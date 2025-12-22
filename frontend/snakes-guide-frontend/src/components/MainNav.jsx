@@ -4,9 +4,9 @@ export default function MainNav() {
     return (
         <header>
             <nav className="flex justify-between gap-8 p-4">
-                <h1 className="text-white"
+                <h1 className="text-white font-serif"
                 >
-                    SNAKES INFO
+                    SAAPMAHIIITE
                 </h1>
                 <ul className="flex gap-4">
                     <li>
@@ -14,7 +14,7 @@ export default function MainNav() {
                             end={true} 
                             to='/'
                             className={({isActive})=>
-                                isActive ? "text-green-500" : "text-white"
+                                isActive ? "border-b-2 border-green-500 pb-1 text-green-200 text-md p-5" : " p-5 hover:border-b-2 pb-1 transition-all text-white"
                             }
                             >
                                 Hompage
@@ -24,7 +24,7 @@ export default function MainNav() {
                             <NavLink 
                             to='/snakes-info'
                             className={({isActive})=>
-                                isActive ? "text-green-500" : "text-white"
+                                isActive ? "border-b-2 border-green-500 pb-1 text-green-200 text-md p-5" : " p-5 hover:border-b-2 pb-1 transition-all text-white"
                             }
                             >
                                 Snakes Info
@@ -34,7 +34,7 @@ export default function MainNav() {
                             <NavLink 
                             to='/contact'
                             className={({isActive})=>
-                                isActive ? "text-green-500" : "text-white"
+                                isActive ? "border-b-2 border-green-500 pb-1 text-green-200 text-md p-5" : " p-5 hover:border-b-2 pb-1 transition-all text-white"
                             }
                             >
                                 Contact
