@@ -30,6 +30,16 @@ export default function MainNav() {
                                 Snakes Info
                             </NavLink>
                     </li>
+                    <li>
+                            <NavLink 
+                            to='/contact'
+                            className={({isActive})=>
+                                isActive ? "text-green-500" : "text-white"
+                            }
+                            >
+                                Contact
+                            </NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>
