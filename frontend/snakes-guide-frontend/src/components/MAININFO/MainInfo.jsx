@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import SnakeCard from "../Info-Card";
 import MainNav from "../MainNav";
 import MapInfo from "./MapInfo";
+import Modal from "../Modal/Modal";
 
 const COMMON_KRAIT_DATA = {
   id: "common-krait",
@@ -40,10 +42,18 @@ const COMMON_KRAIT_DATA = {
   }
 };
 
+
+
 export default function MainInfo() {
+    const modalref = useRef();
+    
+    function openModal() {
+        modalref.current.open();
+    }
+
     return (
-        
         <div className="relative">
+            <div><Modal snakeId="common-krait" ref={modalref} /></div>
             <header className="bg-gray-500 fixed w-full z-20">
                 <MainNav />
             </header>
@@ -117,6 +127,7 @@ export default function MainInfo() {
                                             </div>
                                             <button
                                                 className="mt-4 bg-gray-600 w-full sm:w-auto rounded-full text-white px-8 py-2 hover:bg-gray-800 transition-colors font-medium"
+                                                onClick={openModal}
                                             >
                                                 Compare
                                             </button>
