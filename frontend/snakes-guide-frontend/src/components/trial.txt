@@ -1,33 +1,90 @@
-export default function SnakeCard({ name, scientificName, image, type }) {
+export default function MainInfo() {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-100">
-      {/* Image Container */}
-      <div className="relative h-48 overflow-hidden">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+    <div className="relative">
+      <header className="bg-gray-500 fixed w-full z-20">
+        <MainNav />
+      </header>
+
+      {/* Hero Image Section */}
+      <div className="w-full h-[40vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-[#1A1A1A]">
+        <img
+          className="w-full h-full object-cover object-center shadow-2xl"
+          src="/main/common.png"
+          alt="Common Krait"
         />
-        {/* Status Badge */}
-        <span className={`absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-white ${
-          type === 'Venomous' ? 'bg-red-600' : 'bg-green-600'
-        }`}>
-          {type}
-        </span>
       </div>
 
-      {/* Text Content */}
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-gray-800 mb-1">{name}</h3>
-        <p className="text-sm italic text-gray-500 font-medium">{scientificName}</p>
-        
-        <div className="mt-4 pt-4 border-t border-gray-50 flex justify-between items-center">
-          <span className="text-xs font-bold text-green-700 uppercase tracking-tighter">View Details</span>
-          <svg className="w-4 h-4 text-green-700 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+      <main className="relative">
+        {/* Main Content Container */}
+        <div className="flex flex-col max-w-[95%] md:max-w-[90%] mx-auto pt-8 md:pt-12 z-10 bg-[#f7f8f2] px-4 md:px-6 pb-12 md:pb-20 rounded-t-[2rem] -mt-12 shadow-2xl my-3">
+          
+          {/* Header Info: Name and Badges */}
+          <div className="bg-gray-100 w-full flex flex-col md:flex-row items-start md:items-center justify-start gap-4 md:gap-8 p-4 rounded-xl">
+            <div className="w-full md:w-[30%]">
+              <h1 className="text-2xl md:text-3xl font-bold">Common Krait</h1>
+              <p className="text-lg md:text-xl text-gray-700 italic">Bungarus caeruleus</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-sm md:text-xl rounded-full bg-yellow-300 py-1 px-4 font-semibold">
+                Venomous
+              </span>
+              <span className="text-sm md:text-xl rounded-lg bg-gray-300 py-1 px-4">
+                Indian Subregions
+              </span>
+            </div>
+          </div>
+
+          {/* Grid/Flex Content: Map and Lookalike */}
+          <div className="flex flex-col lg:flex-row mt-6 md:m-8 gap-4">
+            
+            {/* Map Section */}
+            <div className="bg-gray-200/50 rounded-[1rem] p-2 flex-[5] w-full">
+              <MapInfo snake_data={COMMON_KRAIT_DATA} />
+            </div>
+
+            {/* Lookalike/Identification Section */}
+            <div className="bg-gray-100/70 rounded-[1rem] flex-[4] w-full">
+              <div className="flex flex-col justify-center items-center gap-6 p-6">
+                
+                {/* Identification Images */}
+                <div className="flex flex-row lg:flex-col gap-4 w-full justify-center">
+                    <img
+                        className="w-1/2 lg:w-[80%] aspect-square object-cover rounded-[1rem] shadow-md"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6aC0YQxC9s_8XQqGyg6zNejqajO1hDeDRw&s"
+                        alt="head detail"
+                    />
+                    <img
+                        className="w-1/2 lg:w-[80%] aspect-square object-cover rounded-[1rem] shadow-md"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6aC0YQxC9s_8XQqGyg6zNejqajO1hDeDRw&s"
+                        alt="body detail"
+                    />
+                </div>
+
+                {/* Lookalike Card */}
+                <div className="w-full flex flex-col justify-center items-center">
+                  <h1 className="font-bold mb-4 self-start border-b-2 border-gray-400 w-full">LOOKALIKE</h1>
+                  <div className="w-full max-w-[300px]">
+                      <SnakeCard
+                        name="Indian Cobra"
+                        scientificName="Naja naja"
+                        type="Venomous"
+                        image="/the-big-four/kc.png"
+                      />
+                  </div>
+                  <button className="mt-4 bg-gray-600 w-auto md:w-auto rounded-full text-white px-8 py-2 hover:bg-gray-800 transition-colors font-medium">
+                    Compare
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <footer className="bg-gray-500 text-white text-center py-6 mt-12 text-sm">
+          &copy; {new Date().getFullYear()} Saapmahiiite. Made for educational purposes. @Dnyan_dev
+        </footer>
+      </main>
     </div>
   );
 }
