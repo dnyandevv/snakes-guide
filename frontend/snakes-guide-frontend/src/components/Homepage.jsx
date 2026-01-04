@@ -3,10 +3,10 @@ import SnakeCard from "./Info-Card";
 
 export default function Homepage() {
     const SNAKE_DATA = [
-        { name: "Indian Cobra", scientificName: "Naja naja", type: "Venomous", image: "/the-big-four/kc.png" },
-        { name: "Common Krait", scientificName: "Bungarus caeruleus", type: "Venomous", image: "/the-big-four/ck.png" },
-        { name: "Russell's Viper", scientificName: "Daboia russelii", type: "Venomous", image: "/the-big-four/rv.png" },
-        { name: "Saw-scaled Viper", scientificName: "Echis carinatus", type: "Venomous", image: "/the-big-four/sv.jpg" },
+        { id:"cobra",name: "Indian Cobra", scientificName: "Naja naja", type: "Venomous", image: "/the-big-four/kc.png" },
+        { id:"common-krait", name: "Common Krait", scientificName: "Bungarus caeruleus", type: "Venomous", image: "/the-big-four/ck.png" },
+        { id:"russells-viper", name: "Russell's Viper", scientificName: "Daboia russelii", type: "Venomous", image: "/the-big-four/rv.png" },
+        { id:"saw-scaled-viper", name: "Saw-scaled Viper", scientificName: "Echis carinatus", type: "Venomous", image: "/the-big-four/sv.jpg" },
     ];
 
     return (
@@ -15,10 +15,14 @@ export default function Homepage() {
                 <h2 className="text-3xl font-bold text-green-900 font-serif mb-6 pl-4">
                     The Big Four
                 </h2>
-                <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory justify-evenly">
+                <div className="flex gap-4 overflow-x-auto pb-4  justify-evenly">
                     {SNAKE_DATA.map((snake) => (
-                        <div key={snake.name} className="min-w-[280px] max-w-[300px] flex">
-                            <SnakeCard key={snake.name} {...snake} />
+                        <div         
+                            className="min-w-[280px] max-w-[300px] flex">
+                            <SnakeCard
+                                id={snake.id}
+                                {...snake} 
+                            />
                         </div>
                     ))}
                 </div>

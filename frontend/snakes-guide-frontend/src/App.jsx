@@ -1,5 +1,5 @@
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router' // 1. Added ScrollRestoration
 import RootLayout from './components/Rootlayout'
 import Homepage from './components/Homepage'
 import SnakeInfo from './components/SnakeInfo'
@@ -9,7 +9,12 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <RootLayout />,
+      element: (
+        <>
+          <ScrollRestoration /> {/* 2. This handles the scroll reset automatically */}
+          <RootLayout />
+        </>
+      ),
       children:[
         {
           index: true,
@@ -23,11 +28,14 @@ function App() {
     },
     {
       path:'snakes-info/:id',
-      element: <MainInfo />
+      element: (
+        <>
+          <ScrollRestoration /> {/* 3. Also added here for your standalone route */}
+          <MainInfo />
+        </>
+      )
     }
   ])
-
-
 
   return (
     <>
