@@ -1,7 +1,7 @@
 import SnakeInfooNav from "./Snake-info-nav";
 import SnakeCard from "./Info-Card";
-import { useState } from "react";
-import SNAKES_DATA from "../Utils/full_data.js";
+import { useEffect, useState } from "react";
+import { fetchSnakes } from "../Utils/data_fetch.js";
 
 export default function SnakeInfo() {
    
@@ -30,6 +30,15 @@ export default function SnakeInfo() {
 
     // ];
 
+    const [SNAKE_DATA, setSnakeData] = useState({});
+
+    useEffect(() => {
+        fetchSnakes().then(data => {
+            setSnakeData(data);
+        });
+    }, []);
+
+    console.log(SNAKE_DATA);
     const [sortbasedon, setsortbasedon] = useState('venomous');
     function handleclick(e){
         setsortbasedon(e);
@@ -42,12 +51,12 @@ export default function SnakeInfo() {
                 <SnakeInfooNav setbasedon={handleclick} sortstate={sortbasedon}/>
                 <div>
                     <div className="flex flex-wrap gap-4 overflow-y-auto pb-4  justify-evenly">
-                        {Object.values(SNAKES_DATA).map((snake) => (
+                        {Object.values(SNAKE_DATA).map((snake) => (
                             <div className="min-w-[280px] max-w-[300px] flex">
-                                <SnakeCard key={snake.commonName} 
-                                    name={snake.commonName} 
-                                    scientificName={snake.scientificName} 
-                                    type={snake.venomStatus} 
+                                <SnakeCard key={snake.common_name} 
+                                    name={snake.common_name} 
+                                    scientificName={snake.scientific_name} 
+                                    type={snake.venom_status} 
                                     image={snake.image}
                                     id={snake.id}
                                 />
