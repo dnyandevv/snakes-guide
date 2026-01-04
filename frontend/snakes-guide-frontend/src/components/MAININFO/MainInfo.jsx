@@ -225,7 +225,7 @@ export default function MainInfo() {
 
 
 
-                            <div className="flex flex-col lg:flex-row mt-6 md:m-8 gap-4">
+                            <div className="flex flex-col lg:flex-row mt-6 md:m-8 gap-4 items-start">
 
 
                                 <div className="bg-gray-200/50 rounded-[1rem] w-full p-2 flex-[5]">
@@ -233,15 +233,15 @@ export default function MainInfo() {
                                 </div>
 
 
-                                <div className="bg-gray-100/70 rounded-[1rem] m-2 flex-[4]">
+                                <div className="bg-gray-100/70 rounded-[1rem] m-2 flex-[4] xl:sticky xl:top-10 xl:self-start">
                                     <div className="flex flex-col justify-center items-center gap-6 p-6">
-                                        <div className="flex flex-row lg:flex-col gap-4 w-ful justify-center md:items-center">
+                                        <div className="flex flex-row lg:flex-col gap-4 w-ful xl:flex-row justify-center md:items-center">
                                             <img 
-                                                className="w-1/2 lg:w-[80%] aspect-square object-cover rounded-[1rem] shadow-md"
-                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6aC0YQxC9s_8XQqGyg6zNejqajO1hDeDRw&s" alt="head" />
+                                                className="w-1/2 lg:w-[80%] md:max-w-[200px] aspect-square object-cover rounded-[1rem] shadow-md"
+                                                src="https://offgridweb.com/wp-content/uploads/2016/08/Infographic-snake-bite-first-aid-1.jpg" alt="head" />
                                             <img 
-                                                className="w-1/2 lg:w-[80%] aspect-square object-cover rounded-[1rem] shadow-md"
-                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6aC0YQxC9s_8XQqGyg6zNejqajO1hDeDRw&s" alt="b" />
+                                                className="w-1/2 lg:w-[80%] md:max-w-[200px] aspect-square object-cover rounded-[1rem] shadow-md"
+                                                src="https://allens-training-assets.spicyweb.net.au/main/_1920xAUTO_crop_center-center_80_none/85512/Snake-bite.webp" alt="b" />
                                             
                                         </div>
 
