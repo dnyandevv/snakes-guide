@@ -18,7 +18,7 @@ export default function RootLayout() {
                         
                     </div>
                     <main className="relative ">
-                        <div className="max-w-[90%] mx-auto pt-12 z-10 bg-[#f7f8f2] px-6 pb-20 rounded-t-[3rem] -mt-12 shadow-2xl">
+                        <div className="max-w-[90%] mx-auto pt-12 z-10 bg-[#f7f8f2] px-6 pb-20 rounded-t-[3rem] md:-mt-12 shadow-2xl">
                             <Outlet />
                         </div>
 

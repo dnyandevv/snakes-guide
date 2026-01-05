@@ -16,13 +16,14 @@ export default function MainNav() {
 
     return (
         <header className="bg-gray-900/95 backdrop-blur-sm w-full shadow-lg border-b border-white/10">
-            <nav className="flex flex-wrap items-center justify-between p-4 max-w-7xl mx-auto">
-                {/* Logo with better spacing */}
+            <nav className="flex flex-wrap items-center justify-between p-4 mx-auto">
+
+
                 <h1 className="text-white font-serif text-2xl tracking-tighter">
                     SAAP<span className="text-green-500">MAHIIITE</span>
                 </h1>
 
-                {/* Mobile Hamburger Button */}
+
                 <button 
                     onClick={toggleMenu}
                     className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
@@ -36,24 +37,18 @@ export default function MainNav() {
                     </svg>
                 </button>
 
-                {/* Navigation Links */}
                 <ul className={`${
                     isOpen ? "flex opacity-100 scale-y-100" : "hidden md:flex opacity-0 md:opacity-100"
                 } flex-col md:flex-row w-full md:w-auto mt-4 md:mt-0 gap-2 md:gap-8 items-center origin-top transition-all duration-300`}>
                     
-                    <li className="w-full md:w-auto text-center">
+                    <li className="w-full md:w-auto gap-4 text-center">
                         <NavLink end to='/' className={linkClasses} onClick={() => setIsOpen(false)}>
                             Homepage
                         </NavLink>
                     </li>
-                    <li className="w-full md:w-auto text-center">
+                    <li className="w-full md:w-auto gap-4 text-center">
                         <NavLink to='/snakes-info' className={linkClasses} onClick={() => setIsOpen(false)}>
                             Snakes Info
-                        </NavLink>
-                    </li>
-                    <li className="w-full md:w-auto text-center">
-                        <NavLink to='/contact' className={linkClasses} onClick={() => setIsOpen(false)}>
-                            Contact
                         </NavLink>
                     </li>
                 </ul>

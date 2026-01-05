@@ -12,7 +12,7 @@ export default function Homepage() {
     return (
         <>
             <div>
-                <h2 className="text-3xl font-bold text-green-900 font-serif mb-6 pl-4">
+                <h2 className="sm:mt-10 text-3xl font-bold text-green-900 font-serif mb-6 pl-4">
                     The Big Four
                 </h2>
                 <div className="flex gap-4 overflow-x-auto pb-4  justify-evenly">
