@@ -4,7 +4,7 @@ import { fetchSnakeById } from "../../Utils/data_fetch";
 import ComparisionMap from "./ComparisionMap";
 
 const Modal = forwardRef(
-  function Modal({id}, ref) {
+  function Modal({id , id2}, ref) {
     const dialogRef = useRef(null);
     const scrollContainerRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +15,21 @@ const Modal = forwardRef(
         dialogRef.current?.showModal();
         document.body.style.overflow = "hidden";
       }
-      fetchSnakeById('spectacled-cobra').then((data) => {
+      if(id2 === null)
+        {  fetchSnakeById('spectacled-cobra').then((data) => {
+            setComparedSnakes(data);
+          });
+        }
+
+      else{
+        fetchSnakeById(id2).then((data) => {
           setComparedSnakes(data);
-      });
+        });
+      }
       fetchSnakeById(id).then((data) => {
           setSnakeDataById(data);
       });
-    }, [isOpen, id]);
+    }, [isOpen, id, id2]);
 
     const handleClose = () => {
       dialogRef.current?.close();
@@ -44,8 +52,13 @@ const Modal = forwardRef(
       <dialog
         ref={dialogRef}
         onClose={handleClose}
-        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[85vh] srounded-[.4rem] p-0 z-[50]"
+        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[85vh] rounded-[.4rem] p-0 z-[50]"
       >
+        <div 
+          className={`transition-all duration-300 ease-out
+          ${isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"}
+        `}
+        >
         <div className="flex justify-between items-center overflow-y-auto no-scrollbar p-4 border-b">
           {/* <div className="bg-gray-200/50 rounded-[1rem] w-full p-2 flex-[5]">
               <h1>{snakeDataById.data?.commonName}</h1>
@@ -76,6 +89,7 @@ const Modal = forwardRef(
           >
             Close
           </button>
+        </div>
         </div>
       </dialog>,
       document.getElementById("modal")

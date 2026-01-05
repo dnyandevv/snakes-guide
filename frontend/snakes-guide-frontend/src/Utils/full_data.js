@@ -362,7 +362,48 @@ const SNAKES_DATA = {
     mapData: {
       activeHotspots: ["Pan-India"]
     }
-  }
+  },
+
+  "wolf-snake": {
+    id: "wolf-snake",
+    commonName: "Common Wolf Snake",
+    scientificName: "Lycodon aulicus",
+    venomStatus: "Non-venomous",
+    dangerLevel: "Low",
+    image: "/snakes/wolf-snake.png",
+    tags: ["Nocturnal", "Harmless", "Urban-Adapter", "Terrestrial"],
+    headerImage: "/main/wolf-snake-header.png",
+    overview: {
+      description:
+        "A slender, non-venomous snake frequently found in and around human dwellings. It is famous for its mimicry of the deadly Common Krait, which serves as a defense mechanism against predators.",
+      temperament:
+        "Nervous and defensive when confronted; it may bite readily if handled, though it possesses no venom. Known for being an excellent climber."
+    },
+    habitatDiet: {
+      regions: ["India", "Pakistan", "Sri Lanka", "Nepal", "Southeast Asia"],
+      environment:
+        "Found in caves, stone piles, and heavily urbanized areas. It often hides in wall crevices, ceilings, and thatched roofs.",
+      prey: "Primarily feeds on skinks, geckos, and small lizards."
+    },
+    identification: {
+      color: "Grey, brown, or blackish-brown.",
+      patterns:
+        "White or yellowish crossbands that are broader at the sides and narrowest at the spine. Unlike the Krait, these bands usually begin near the neck.",
+      eyes: "Small to medium eyes with vertically elliptical (slit-like) pupils.",
+      scales:
+        "Smooth, glossy scales. Notably lacks the enlarged hexagonal vertebral scales found on the Common Krait."
+    },
+    safety: {
+      firstAid:
+        "Wash the bite area with soap and water to prevent infection. While non-venomous, professional identification is recommended if there is any doubt regarding the species.",
+      prevention:
+        "Keep homes free of geckos and lizards (their primary food source) and seal cracks or crevices in walls."
+    },
+    mapData: {
+      activeHotspots: ["South Asia", "Deccan Plateau", "Ganges Basin"]
+    }
+}
+
 };
 
 export default SNAKES_DATA;
