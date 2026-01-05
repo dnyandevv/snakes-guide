@@ -15,7 +15,7 @@ export default function Homepage() {
                 <h2 className="sm:mt-10 text-3xl font-bold text-green-900 font-serif mb-6 pl-4">
                     The Big Four
                 </h2>
-                <div className="flex gap-4 overflow-x-auto pb-4  justify-evenly">
+                <div className="flex gap-4 overflow-x-auto pb-4 justify-evenly">
                     {SNAKE_DATA.map((snake) => (
                         <div         
                             className="min-w-[280px] max-w-[300px] flex">

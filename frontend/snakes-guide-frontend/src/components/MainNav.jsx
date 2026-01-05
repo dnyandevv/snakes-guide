@@ -6,7 +6,7 @@ export default function MainNav() {
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
-    // Cleaner link logic: removed bulky padding, added subtle hover effects
+
     const linkClasses = ({ isActive }) =>
         `transition-all duration-300 py-2 px-4 md:py-1 md:px-0 ${
             isActive

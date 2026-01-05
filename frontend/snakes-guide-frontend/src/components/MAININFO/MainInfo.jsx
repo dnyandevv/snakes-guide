@@ -4,7 +4,6 @@ import MainNav from "../MainNav";
 import MapInfo from "./MapInfo";
 import Modal from "../Modal/Modal";
 import { useParams } from "react-router";
-import SNAKES_DATA from "../../Utils/full_data.js";
 import { fetchSnakeById } from "../../Utils/data_fetch.js";
 
 // const snakeDataById = {
@@ -196,7 +195,7 @@ export default function MainInfo() {
 
     return (
         <div className="relative">
-            <div><Modal snakeId="common-krait" ref={modalref} /></div>
+            <div><Modal id="common-krait" ref={modalref} /></div>
             <header className="bg-gray-500 sticky top-0 md:fixed w-full md:z-20">
                 <MainNav />
             </header>
