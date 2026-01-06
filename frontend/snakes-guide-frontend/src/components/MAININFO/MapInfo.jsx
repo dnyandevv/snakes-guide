@@ -1,12 +1,9 @@
 import SectionInfo from "./SectionsInformation";
 
 export default function MapInfo({snake_data}) {
-
     if (!snake_data) {
-        console.log("MapInfo: No data received yet");
         return null;
     }
-
     const SNAKE_DATA_SECTIONS = Object.keys(snake_data)
         .filter((key) => typeof snake_data[key] === "object" && !Array.isArray(snake_data[key]))
         .map((key) => ({
@@ -15,10 +12,6 @@ export default function MapInfo({snake_data}) {
             title: key.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase()),
             data: snake_data[key],
         }));
-
-
-    console.log(SNAKE_DATA_SECTIONS);
-
     return (
         <>
             <div className="max-w-3xl mx-auto p-4">

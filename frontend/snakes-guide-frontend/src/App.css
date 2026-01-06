@@ -35,3 +35,40 @@
   color: #888;
 }
 
+@keyframes smoothSequence {
+  0% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.98);
+    z-index: 0;
+  }
+  5%, 30% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 10;
+  }
+  35%, 100% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.98);
+    z-index: 0;
+  }
+}
+
+.animate-card-1 {
+  animation: smoothSequence 6s infinite 0s;
+}
+
+.animate-card-2 {
+  animation: smoothSequence 6s infinite 2s;
+}
+
+.animate-card-3 {
+  animation: smoothSequence 6s infinite 4s;
+}
+
+.card-stack-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  will-change: opacity, transform;
+}

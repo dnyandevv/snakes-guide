@@ -9,10 +9,10 @@ export default function Homepage() {
         modalref.current.open();
     }
     const SNAKE_DATA = [
-        { id:"spectacled-cobra",name: "Indian Cobra", scientificName: "Naja naja", type: "Venomous", image: "/the-big-four/kc.png" },
-        { id:"common-krait", name: "Common Krait", scientificName: "Bungarus caeruleus", type: "Venomous", image: "/the-big-four/ck.png" },
-        { id:"russells-viper", name: "Russell's Viper", scientificName: "Daboia russelii", type: "Venomous", image: "/the-big-four/rv.png" },
-        { id:"saw-scaled-viper", name: "Saw-scaled Viper", scientificName: "Echis carinatus", type: "Venomous", image: "/the-big-four/sv.jpg" },
+        { id:"spectacled-cobra",name: "Indian Cobra", scientificName: "Naja naja", type: "Venomous", image: "/the-big-four/kc.webp" },
+        { id:"common-krait", name: "Common Krait", scientificName: "Bungarus caeruleus", type: "Venomous", image: "/the-big-four/ck.webp" },
+        { id:"russells-viper", name: "Russell's Viper", scientificName: "Daboia russelii", type: "Venomous", image: "/the-big-four/rv.webp" },
+        { id:"saw-scaled-viper", name: "Saw-scaled Viper", scientificName: "Echis carinatus", type: "Venomous", image: "/the-big-four/sv.webp" },
     ];
 
     return (
@@ -38,13 +38,29 @@ export default function Homepage() {
                     The Confussion Matrix
                 </h2>
                 <div className="flex flex-col justify-center">
-                    <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory justify-evenly">
+                    {/* this is for mobiel */}
+                    <div className="relative h-[380px] w-full max-w-[280px] mx-auto md:hidden">
+                        <div className="card-stack-item animate-card-1">    
+                            <SnakeCard id="common-wolf-snake" name="Wolf Snake" type="Non-Venomous" scientificName="Lycodon aulicus" image={'/the-big-four/wolf-snake.webp'}/>
+                        </div>
+                        <div className="flex justify-center items-center card-stack-item animate-card-2 opacity-0" ><p className="text-6xl font-bold text-emerald-600">?</p></div>
+                        <div className="card-stack-item animate-card-3 opacity-0">
+                            <SnakeCard 
+                                id="common-krait"
+                                name="Common Krait"
+                                type="Venomous"
+                                scientificName="Bungarus caeruleus"
+                                image={'/the-big-four/ck.webp'}
+                            />
+                        </div>
+                    </div>
+                    <div className="hidden md:flex gap-4 overflow-x-auto pb-4 justify-evenly">
                         <SnakeCard 
                             id="common-wolf-snake"
                             name="Wolf Snake"
                             type="Non-Venomous"
                             scientificName="Lycodon aulicus"
-                            image={'/the-big-four/wolf-snake.jpg'}
+                            image={'/the-big-four/wolf-snake.webp'}
                         />
                         <div className="flex justify-center items-center"><p className="text-6xl font-bold text-emerald-600">?</p></div>
                         <SnakeCard 
@@ -52,7 +68,7 @@ export default function Homepage() {
                             name="Common Krait"
                             type="Venomous"
                             scientificName="Bungarus caeruleus"
-                            image={'/the-big-four/ck.png'}
+                            image={'/the-big-four/ck.webp'}
                         />
                     </div>
                     <div className="text-center">

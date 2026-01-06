@@ -81,7 +81,7 @@ export default function MainInfo() {
                                                     name="Indian Cobra" 
                                                     scientificName="Naja naja" 
                                                     type="Venomous" 
-                                                    image="/the-big-four/kc.png"
+                                                    image="/the-big-four/kc.webp"
                                                 />
                                             </div>
                                             <button
