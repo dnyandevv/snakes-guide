@@ -9,10 +9,10 @@ export default function Homepage() {
         modalref.current.open();
     }
     const SNAKE_DATA = [
-        { id:"spectacled-cobra",name: "Indian Cobra", scientificName: "Naja naja", type: "Venomous", image: "/the-big-four/kc.png" },
-        { id:"common-krait", name: "Common Krait", scientificName: "Bungarus caeruleus", type: "Venomous", image: "/the-big-four/ck.png" },
-        { id:"russells-viper", name: "Russell's Viper", scientificName: "Daboia russelii", type: "Venomous", image: "/the-big-four/rv.png" },
-        { id:"saw-scaled-viper", name: "Saw-scaled Viper", scientificName: "Echis carinatus", type: "Venomous", image: "/the-big-four/sv.jpg" },
+        { id:"spectacled-cobra",name: "Indian Cobra", scientificName: "Naja naja", type: "Venomous", image: "/the-big-four/kc.webp" },
+        { id:"common-krait", name: "Common Krait", scientificName: "Bungarus caeruleus", type: "Venomous", image: "/the-big-four/ck.webp" },
+        { id:"russells-viper", name: "Russell's Viper", scientificName: "Daboia russelii", type: "Venomous", image: "/the-big-four/rv.webp" },
+        { id:"saw-scaled-viper", name: "Saw-scaled Viper", scientificName: "Echis carinatus", type: "Venomous", image: "/the-big-four/sv.webp" },
     ];
 
     return (
@@ -44,7 +44,7 @@ export default function Homepage() {
                             name="Wolf Snake"
                             type="Non-Venomous"
                             scientificName="Lycodon aulicus"
-                            image={'/the-big-four/wolf-snake.jpg'}
+                            image={'/the-big-four/wolf-snake.webp'}
                         />
                         <div className="flex justify-center items-center"><p className="text-6xl font-bold text-emerald-600">?</p></div>
                         <SnakeCard 
@@ -52,7 +52,7 @@ export default function Homepage() {
                             name="Common Krait"
                             type="Venomous"
                             scientificName="Bungarus caeruleus"
-                            image={'/the-big-four/ck.png'}
+                            image={'/the-big-four/ck.webp'}
                         />
                     </div>
                     <div className="text-center">
