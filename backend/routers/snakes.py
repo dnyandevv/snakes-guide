@@ -25,4 +25,13 @@ def get_snake(snake_id: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Snake not found")
 
     snake, details = result
-    return {**snake.__dict__, "data": details.data}
+    return {
+        "id": snake.id,
+        "common_name": snake.common_name,
+        "scientific_name": snake.scientific_name,
+        "venom_status": snake.venom_status,
+        "danger_level": snake.danger_level,
+        "image": snake.image,
+        "header_image": snake.header_image,
+        "data": details.data
+    }
