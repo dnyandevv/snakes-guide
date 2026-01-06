@@ -6,7 +6,13 @@
 
   background-size: cover;
   background-position: center top;
-  background-image: url('/bg-image-cropped.png');
+  background-image: url('/bg-image-mobile.webp');
+}
+
+@media (min-width: 768px) {
+  .root-layout-bg {
+    background-image: url('/bg-image-cropped.webp');
+  }
 }
 
 @keyframes fadeIn {
