@@ -84,7 +84,16 @@ const Modal = forwardRef(
         </div>
         <div className="p-6 bg-white border-t flex justify-center shrink-0">
           <button type="button" 
-
+            className="relative px-12 py-3 
+                    bg-transparent 
+                    border border-[#05422c] 
+                    text-[#05422c] 
+                    text-[10px] font-black uppercase tracking-[0.25em] 
+                    rounded-sm
+                    transition-all duration-300 ease-in-out
+                    hover:bg-[#05422c] hover:text-[#f7f8f2]
+                    active:bg-[#032b1d]
+                    cursor-pointer"
             onClick={handleClose}
           >
             Close
